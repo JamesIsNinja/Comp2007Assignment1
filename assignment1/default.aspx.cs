@@ -24,10 +24,6 @@ namespace assignment1
             int allow = 0;
             int attendance = 0;
 
-
-            int winPercent = 0;
-            int averageAtt = 0;
-
             lblSubmitWarning.Text = "";
             if (game.validate() && game1.validate() && game2.validate() && game3.validate())    
             {
@@ -56,9 +52,9 @@ namespace assignment1
                 }
                 else
                 {
-                    lblAvgAtt.Text ="Average Attendance: " + (averageAtt = attendance / 4).ToString();
+                    lblAvgAtt.Text ="Average Attendance: " + (attendance / 4).ToString();
                 }
-                lblSubmitWarning.Text = "Results: ";
+                lblResults.Visible = true;
                 lblResults.Visible = true;
                 lblWins.Visible = true;
                 lblPointScored.Visible = true;

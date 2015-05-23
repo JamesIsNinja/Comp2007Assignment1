@@ -18,30 +18,50 @@ namespace assignment1
 
         protected void txtScored_TextChanged(object sender, EventArgs e)
         {
-            if (Int32.Parse(txtScored.Text) < 0)
+            try
             {
-                lblWarning1.Text = "Value must be numeric, and above one!";
+                if (Int32.Parse(txtScored.Text) < 0)
+                {
+                    lblWarning1.Text = "Value must be a #, and above one!";
+                }
+                else if (Int32.Parse(txtAllowed.Text) == Int32.Parse(txtScored.Text))
+                {
+                    lblWarning1.Text = "Scores can't be the same";
+
+                }
+                else
+                {
+                    lblWarning1.Text = "";
+                    lblWarning2.Text = "";
+                }
             }
-            else
+            catch (Exception)
             {
-                lblWarning1.Text = "";
+
             }
         }
 
         protected void txtAllowed_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                if (Int32.Parse(txtAllowed.Text) < 0)
+                {
+                    lblWarning2.Text = "Value must be a #, and above one!";
+                }
+                else if (Int32.Parse(txtAllowed.Text) == Int32.Parse(txtScored.Text))
+                {
+                    lblWarning2.Text = "Scores can't be the same";
+                }
+                else
+                {
+                    lblWarning2.Text = "";
+                    lblWarning1.Text = "";
+                }
+            }
+            catch (Exception)
+            {
 
-            if (Int32.Parse(txtAllowed.Text) < 0)
-            {
-                lblWarning2.Text = "Value must be numeric, and above one!";
-            }
-            else if (Int32.Parse(txtAllowed.Text) == Int32.Parse(txtScored.Text))
-            {
-                lblWarning2.Text = "Scores can't be the same";
-            }
-            else
-            {
-                lblWarning2.Text = "";
             }
         }
 
@@ -49,7 +69,7 @@ namespace assignment1
         {
             if (Int32.Parse(txtSpec.Text) < 0)
             {
-                lblWarning3.Text = "Value must be numeric!";
+                lblWarning3.Text = "Value must be numeric, 0 or more.";
             }
             else
             {
@@ -63,7 +83,6 @@ namespace assignment1
                 if (Int32.Parse(txtAllowed.Text) != Int32.Parse(txtScored.Text) 
                     && Int32.Parse(txtAllowed.Text) > 0 
                     && Int32.Parse(txtScored.Text) > 0
-                    
                     && Int32.Parse(txtSpec.Text) >= 0
                     && rblWinLose.SelectedValue == "Win" || rblWinLose.SelectedValue == "Lose")
                 {

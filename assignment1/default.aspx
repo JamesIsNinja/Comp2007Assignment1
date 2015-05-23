@@ -24,11 +24,11 @@
     <div class="container text-center">
     <asp:Button ID="btnSubmit" runat="server" Text="Calculate Totals" OnClick="btnSubmit_Click" class="btn btn-primary btn-lg"/>
         </div>
-        <div class="container text-center">
+        <div class="container text-center" style="color:red;">
     <asp:Label ID="lblSubmitWarning" runat="server"></asp:Label><br />
             </div>
     <div class="container text-center">
-      <!--<asp:Label ID="lblResults" runat="server" Visible="false" Text="Results: "></asp:Label>-->
+      <asp:Label ID="lblResults" runat="server" Visible="false" Text="Results: " Font-Bold="true"></asp:Label><br />
         <asp:Label ID="lblWins" runat="server" Visible="false"></asp:Label><br />
         <asp:Label ID="lblLosses" runat="server" Visible="false"></asp:Label><br />
         <asp:Label ID="lblWinPercent" runat="server" Visible="false"></asp:Label><br />
