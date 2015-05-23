@@ -1,8 +1,12 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebPageMaster.master.cs" Inherits="assignment1.WebPageMaster" %>
+﻿<!--
+    James White, 200203355
+    May 23rd, 2015
+    This is the master page the default page takes from, has the title, nav bar, header, and footer.
+    -->
 
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebPageMaster.master.cs" Inherits="assignment1.WebPageMaster" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Game Calculator</title>
@@ -17,8 +21,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
-    
 <body>
+    <!--Nav Bar start-->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -26,25 +30,23 @@
         </div><!-- /.container-fluid -->
     </div><!-- /.navbar-collapse -->
 </nav>
-
+    <!-- Nav Bar end -->
+    <!-- Titles, and info -->
     <h1>Game Calculator</h1>
     <h5>All fields are required, no ties allowed.</h5>
+    <!--End of titles and info -->
+    <!--Area for main content -->
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
     </div>
-
+    <!--End of main content area -->
     <!--start footer-->
-    
     <footer class="panel-footer">
         <div class="container text-center">
-        COMP2007 Assignment 1 Solution - Summer 2015<br />
-  
-       </div>
-    </footer>
-            
+            COMP2007 Assignment 1 Solution - Summer 2015<br />
+        </div>
+    </footer>     
     <!--end footer-->
     </form>
 </body>
