@@ -1,10 +1,10 @@
-﻿<!--
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebPageMaster.master.cs" Inherits="assignment1.WebPageMaster" %>
+<!--
     James White, 200203355
     May 23rd, 2015
     This is the master page the default page takes from, has the title, nav bar, header, and footer.
     -->
 
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebPageMaster.master.cs" Inherits="assignment1.WebPageMaster" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">

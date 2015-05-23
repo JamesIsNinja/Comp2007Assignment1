@@ -27,26 +27,31 @@ namespace assignment1
             //Try to parse what they entered, and if it's less then 0, or equal to allowed, tell the user the error.
             try
             {
-                if (Int32.Parse(txtScored.Text) < 0)
+                if (Int32.Parse(txtScored.Text) >= 0)
                 {
-                    lblWarning1.Text = "Value must be a #, and above one!";
-                }
-                else if (Int32.Parse(txtAllowed.Text) == Int32.Parse(txtScored.Text))
-                {
-                    lblWarning1.Text = "Scores can't be the same";
+                    lblWarning1.Text = "";
 
+                }
+                else
+                {
+                    lblWarning1.Text = "Value must be a #, and above one";
+
+
+                }
+                if (Int32.Parse(txtAllowed.Text) == Int32.Parse(txtScored.Text))
+                {
+                    lblWarning4.Text = "Scores can't be the same";
                 }
                     //Else clear warning messages and move on.
                 else
                 {
-                    lblWarning1.Text = "";
-                    lblWarning2.Text = "";
+                    lblWarning4.Text = "";
                 }
             }
                 //catch for an error when parsing
-            catch (Exception)
+            catch (Exception q)
             {
-                lblWarning1.Text = "Value must be a #, and above one!";
+               
             }
         }
         //When the user changes the allowed value
@@ -57,23 +62,26 @@ namespace assignment1
                 //Try to parse what they entered, and if it's less then 0, or equal to allowed, tell the user the error.
                 if (Int32.Parse(txtAllowed.Text) < 0)
                 {
-                    lblWarning2.Text = "Value must be a #, and above one!";
+                    lblWarning2.Text = "Value must be a #, and above one";
                 }
-                else if (Int32.Parse(txtAllowed.Text) == Int32.Parse(txtScored.Text))
+                else
                 {
-                    lblWarning2.Text = "Scores can't be the same";
+                    lblWarning2.Text = "";
+
+                }
+                if (Int32.Parse(txtAllowed.Text) == Int32.Parse(txtScored.Text))
+                {
+                    lblWarning4.Text = "Scores can't be the same";
                 }
                 //Else clear warning messages and move on.
                 else
                 {
-                    lblWarning2.Text = "";
-                    lblWarning1.Text = "";
+                    lblWarning4.Text = "";
                 }
             }
             //catch for an error when parsing
-            catch (Exception)
+            catch (Exception r)
             {
-                lblWarning2.Text = "Value must be a #, and above one!";
             }
         }
         //When the user changes the spectator value
@@ -92,9 +100,8 @@ namespace assignment1
                 }
             }
             //Catch any errors
-            catch (Exception)
+            catch (Exception s)
             {
-                lblWarning3.Text = "Value must be numeric, 0 or more.";
             }
         }
         //Method to call when the user clicks submit, validates all input fields at once.

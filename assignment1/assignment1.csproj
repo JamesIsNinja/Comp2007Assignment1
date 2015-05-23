@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="game.ascx" />
+    <None Include="Properties\PublishProfiles\COMP2007Assignment1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
