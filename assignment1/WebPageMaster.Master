@@ -19,6 +19,14 @@
 </head>
     
 <body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Assignment 1</a>
+        </div><!-- /.container-fluid -->
+    </div><!-- /.navbar-collapse -->
+</nav>
+
     <h1>Game Calculator</h1>
     <form id="form1" runat="server">
     <div>
@@ -28,10 +36,14 @@
     </div>
 
     <!--start footer-->
-    <footer>
-        @2015 James White
+    <div class="container text-center">
+    <footer class="col-md-6 col-md-offset-3">
+        
+        @2015 James White<br />
         <asp:Label ID="lblDate" runat="server" />
+      
     </footer>
+             </div>
     <!--end footer-->
     </form>
 </body>
