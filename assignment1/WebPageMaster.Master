@@ -28,6 +28,7 @@
 </nav>
 
     <h1>Game Calculator</h1>
+    <h5>All fields are required, no ties allowed.</h5>
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -36,14 +37,14 @@
     </div>
 
     <!--start footer-->
-    <div class="container text-center">
-    <footer class="col-md-6 col-md-offset-3">
-        
-        @2015 James White<br />
-        <asp:Label ID="lblDate" runat="server" />
-      
+    
+    <footer class="panel-footer">
+        <div class="container text-center">
+        COMP2007 Assignment 1 Solution - Summer 2015<br />
+  
+       </div>
     </footer>
-             </div>
+            
     <!--end footer-->
     </form>
 </body>

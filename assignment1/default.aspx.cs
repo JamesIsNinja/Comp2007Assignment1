@@ -58,6 +58,8 @@ namespace assignment1
                 {
                     lblAvgAtt.Text ="Average Attendance: " + (averageAtt = attendance / 4).ToString();
                 }
+                lblSubmitWarning.Text = "Results: ";
+                lblResults.Visible = true;
                 lblWins.Visible = true;
                 lblPointScored.Visible = true;
                 lblPointAllowed.Visible = true;

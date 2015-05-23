@@ -24,11 +24,11 @@
     <div class="container text-center">
     <asp:Button ID="btnSubmit" runat="server" Text="Calculate Totals" OnClick="btnSubmit_Click" class="btn btn-primary btn-lg"/>
         </div>
-        <div class="col-md-6 col-md-offset-3">
-    <asp:Label ID="lblSubmitWarning" runat="server"></asp:Label>
+        <div class="container text-center">
+    <asp:Label ID="lblSubmitWarning" runat="server"></asp:Label><br />
             </div>
-        
-    <div>
+    <div class="container text-center">
+      <!--<asp:Label ID="lblResults" runat="server" Visible="false" Text="Results: "></asp:Label>-->
         <asp:Label ID="lblWins" runat="server" Visible="false"></asp:Label><br />
         <asp:Label ID="lblLosses" runat="server" Visible="false"></asp:Label><br />
         <asp:Label ID="lblWinPercent" runat="server" Visible="false"></asp:Label><br />
@@ -37,5 +37,5 @@
         <asp:Label ID="lblPointDiff" runat="server" Visible="false"></asp:Label><br />
         <asp:Label ID="lblTotalAtt" runat="server" Visible="false"></asp:Label><br />
         <asp:Label ID="lblAvgAtt" runat="server" Visible="false"></asp:Label><br />
-    </div>
+    </div><br />
 </asp:Content>
