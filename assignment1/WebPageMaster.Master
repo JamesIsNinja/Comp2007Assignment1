@@ -32,8 +32,10 @@
 </nav>
     <!-- Nav Bar end -->
     <!-- Titles, and info -->
-    <h1>Game Calculator</h1>
-    <h5>All fields are required, no ties allowed.</h5>
+
+        <h1>Game Calculator</h1>
+        <h5>All fields are required, no ties allowed.</h5>
+
     <!--End of titles and info -->
     <!--Area for main content -->
     <form id="form1" runat="server">
